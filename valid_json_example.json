@@ -1,0 +1,24 @@
+{
+  "examples":[
+    {
+      "id":123,
+      "name": "САБАКА",
+      "package_params":{
+        "width":5,
+        "height":80
+      },
+      "location_and_quantity":[
+        {
+          "location":"Магазин на Ленина",
+          "amount":98
+        },
+        {
+          "location":"Магазин в центре",
+          "amount":3
+        }
+      ]
+    }
+  ]
+}
+
+
