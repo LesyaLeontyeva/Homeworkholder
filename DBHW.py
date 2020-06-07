@@ -9,8 +9,7 @@ from jsonschema import SchemaError
 
 conn = sqlite3.connect('HomeworkDB.sqlite')
 conn.execute("PRAGMA foreign_keys = ON")
-cur = conn.cursor()  # посмотреть что делает
-
+cur = conn.cursor()  
 cur.executescript('''
 CREATE TABLE IF NOT EXISTS goods(
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
@@ -72,7 +71,7 @@ for n in res_data:
     width = n['package_params']['width']
     height = n['package_params']['height']
     cur.execute('''SELECT name FROM goods WHERE name = ?''', (name,))
-    select_result = cur.fetchone()  # what is it? (sobaka, )
+    select_result = cur.fetchone()  
     try:
         if select_result[0] == name:
             cur.execute('''UPDATE goods SET package_height = ?,
